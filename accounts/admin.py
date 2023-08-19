@@ -11,7 +11,15 @@ class AccountAdmin(BaseUserAdmin):
     form = AccountChangeForm
     add_form = AccountCreationForm
 
-    list_display = ["email", "first_name", "last_name", "role", "is_admin", "is_active", "signup_date"]
+    list_display = [
+        "email",
+        "first_name",
+        "last_name",
+        "role",
+        "is_admin",
+        "is_active",
+        "signup_date",
+    ]
     list_filter = ["is_admin", "role"]
     fieldsets = [
         (
