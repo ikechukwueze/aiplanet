@@ -43,6 +43,6 @@ class LinkSubmissionAdmin(FileSubmissionAdmin):
 
 admin.site.register(Hackathon, HackathonAdmin)
 admin.site.register(HackathonSubmission, HackathonSubmissionAdmin)
-admin.site.register(FileSubmission)#, FileSubmissionAdmin)
+admin.site.register(FileSubmission, FileSubmissionAdmin)
 admin.site.register(ImageSubmission, ImageSubmissionAdmin)
 admin.site.register(LinkSubmission, LinkSubmissionAdmin)

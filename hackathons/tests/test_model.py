@@ -1,8 +1,9 @@
 import os
+from django.core.files import File
+from django.core.files.images import ImageFile
 from datetime import datetime, timedelta
 from django.test import TestCase
 from django.db import IntegrityError
-from django.core.exceptions import ValidationError
 from accounts.models import Account
 from hackathons.models import Hackathon, HackathonSubmission, FileSubmission, ImageSubmission, LinkSubmission
 
@@ -64,8 +65,10 @@ class ModelTest(TestCase):
     
 
     def test_create_hackathon_submissions(self):
-        image = f"{self.cwd}/test_data/image.jpg"
-        file = f"{self.cwd}/test_data/data.txt"
+        #image = f"{self.cwd}/test_data/image.jpg"
+        #file = f"{self.cwd}/test_data/data.txt"
+        image = open(os.path.join(self.cwd, "test_data", "image.jpg"), "rb")
+        file = open(os.path.join(self.cwd, "test_data", "data.txt"), "rb")
         link = "http://fakelink.com"
 
         hackathons = []
@@ -77,8 +80,8 @@ class ModelTest(TestCase):
             hackathon.participants.add(self.participant)
             hackathons.append(hackathon)
         
-        file_submission = FileSubmission.objects.create(hackathon=hackathons[0], participant=self.participant, submission=file)
-        image_submission = ImageSubmission.objects.create(hackathon=hackathons[1], participant=self.participant, submission=image)
+        file_submission = FileSubmission.objects.create(hackathon=hackathons[0], participant=self.participant, submission=File(file, "data.txt"))
+        image_submission = ImageSubmission.objects.create(hackathon=hackathons[1], participant=self.participant, submission=ImageFile(image, name="image.jpg"))
         link_submission = LinkSubmission.objects.create(hackathon=hackathons[2], participant=self.participant, submission=link)
 
         d = {hackathons[0]: file_submission, hackathons[1]: image_submission, hackathons[2]: link_submission}
