@@ -1,7 +1,3 @@
-# Django Project README
-
-This repository contains a Django project that sets up a platform for managing hackathons, participants, and submissions. Follow the steps below to get started:
-
 ## Getting Started
 
 1. **Clone the Repository**: Clone this repository to your local machine
