@@ -1,0 +1,7 @@
+pyenv
+*.pyc
+**/migrations/0*.py
+/media/background_images
+/media/hackathon_images
+/media/submissions
+*.sqlite3

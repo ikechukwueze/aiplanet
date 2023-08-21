@@ -1,0 +1,157 @@
+[
+    {
+        "model": "hackathons.hackathon",
+        "pk": 1,
+        "fields": {
+            "created_at": "2023-08-21T01:37:44.010Z",
+            "updated_at": "2023-08-21T01:37:44.010Z",
+            "organiser": "626d2192-045d-499b-a4e7-f1b56f5cf085",
+            "title": "hackathon 1",
+            "description": "a hard hackathon",
+            "background_image": "background_images/hackathon_image.jpg",
+            "hackathon_image": "hackathon_images/hackathon_image.jpg",
+            "submission_type": "LINK",
+            "start_date": "2023-08-25T00:00:00Z",
+            "end_date": "2023-10-10T00:00:00Z",
+            "prize": "10000.00",
+            "participants": [
+                "932d138f-584d-41d9-a0f0-591ebe1e88da",
+                "c46bb3bf-caf2-4ad8-aea0-c041d66c792e"
+            ]
+        }
+    },
+    {
+        "model": "hackathons.hackathon",
+        "pk": 2,
+        "fields": {
+            "created_at": "2023-08-21T01:37:54.163Z",
+            "updated_at": "2023-08-21T01:37:54.163Z",
+            "organiser": "626d2192-045d-499b-a4e7-f1b56f5cf085",
+            "title": "hackathon 2",
+            "description": "a hard hackathon",
+            "background_image": "background_images/hackathon_image_Fiet741.jpg",
+            "hackathon_image": "hackathon_images/hackathon_image_Sa9HBXd.jpg",
+            "submission_type": "IMAGE",
+            "start_date": "2023-08-25T00:00:00Z",
+            "end_date": "2023-10-10T00:00:00Z",
+            "prize": "10000.00",
+            "participants": [
+                "932d138f-584d-41d9-a0f0-591ebe1e88da",
+                "c46bb3bf-caf2-4ad8-aea0-c041d66c792e"
+            ]
+        }
+    },
+    {
+        "model": "hackathons.hackathon",
+        "pk": 3,
+        "fields": {
+            "created_at": "2023-08-21T01:38:06.972Z",
+            "updated_at": "2023-08-21T01:38:28.140Z",
+            "organiser": "626d2192-045d-499b-a4e7-f1b56f5cf085",
+            "title": "hackathon 3",
+            "description": "a hard hackathon",
+            "background_image": "background_images/hackathon_image_CX7gtKh.jpg",
+            "hackathon_image": "hackathon_images/hackathon_image_2xIgAcw.jpg",
+            "submission_type": "FILE",
+            "start_date": "2023-08-25T00:00:00Z",
+            "end_date": "2023-10-10T00:00:00Z",
+            "prize": "10000.00",
+            "participants": [
+                "c46bb3bf-caf2-4ad8-aea0-c041d66c792e"
+            ]
+        }
+    },
+    {
+        "model": "hackathons.hackathon",
+        "pk": 4,
+        "fields": {
+            "created_at": "2023-09-21T01:38:06.972Z",
+            "updated_at": "2023-08-21T01:38:28.140Z",
+            "organiser": "626d2192-045d-499b-a4e7-f1b56f5cf085",
+            "title": "hackathon 4",
+            "description": "a hard hackathon",
+            "background_image": "background_images/hackathon_image_CX27gtKh.jpg",
+            "hackathon_image": "hackathon_images/hackathon_image_2xIgA2cw.jpg",
+            "submission_type": "FILE",
+            "start_date": "2023-09-25T00:00:00Z",
+            "end_date": "2023-11-10T00:00:00Z",
+            "prize": "10000.00",
+            "participants": []
+        }
+    },
+    {
+        "model": "hackathons.hackathonsubmission",
+        "pk": "8ccaee0e-7c80-4b15-a519-4792f80d22e6",
+        "fields": {
+            "created_at": "2023-08-21T02:20:39.133Z",
+            "updated_at": "2023-08-21T02:20:39.134Z",
+            "hackathon": 2,
+            "participant": "932d138f-584d-41d9-a0f0-591ebe1e88da",
+            "submission_object_type": 11,
+            "submission_object_id": "00000000-0000-0000-0000-000000000001"
+        }
+    },
+    {
+        "model": "hackathons.hackathonsubmission",
+        "pk": "ac715d08-e3be-4b1d-9523-538773dfc901",
+        "fields": {
+            "created_at": "2023-08-21T02:13:45.740Z",
+            "updated_at": "2023-08-21T02:13:45.742Z",
+            "hackathon": 1,
+            "participant": "c46bb3bf-caf2-4ad8-aea0-c041d66c792e",
+            "submission_object_type": 10,
+            "submission_object_id": "00000000-0000-0000-0000-000000000001"
+        }
+    },
+    {
+        "model": "hackathons.hackathonsubmission",
+        "pk": "bd87a94c-3e9c-4d6b-900e-500dc56a07cb",
+        "fields": {
+            "created_at": "2023-08-21T02:19:13.297Z",
+            "updated_at": "2023-08-21T02:19:13.298Z",
+            "hackathon": 1,
+            "participant": "932d138f-584d-41d9-a0f0-591ebe1e88da",
+            "submission_object_type": 10,
+            "submission_object_id": "00000000-0000-0000-0000-000000000002"
+        }
+    },
+    {
+        "model": "hackathons.imagesubmission",
+        "pk": 1,
+        "fields": {
+            "created_at": "2023-08-21T02:20:39.125Z",
+            "updated_at": "2023-08-21T02:20:39.126Z",
+            "hackathon": 2,
+            "participant": "932d138f-584d-41d9-a0f0-591ebe1e88da",
+            "submission_name": "jane submission",
+            "summary": "janes clever submission",
+            "submission": "submissions/images/hackathon_image.jpg"
+        }
+    },
+    {
+        "model": "hackathons.linksubmission",
+        "pk": 1,
+        "fields": {
+            "created_at": "2023-08-21T02:13:45.737Z",
+            "updated_at": "2023-08-21T02:13:45.737Z",
+            "hackathon": 1,
+            "participant": "c46bb3bf-caf2-4ad8-aea0-c041d66c792e",
+            "submission_name": "john submission",
+            "summary": "johns clever submission",
+            "submission": "https://docs.djangoproject.com/"
+        }
+    },
+    {
+        "model": "hackathons.linksubmission",
+        "pk": 2,
+        "fields": {
+            "created_at": "2023-08-21T02:19:13.291Z",
+            "updated_at": "2023-08-21T02:19:13.291Z",
+            "hackathon": 1,
+            "participant": "932d138f-584d-41d9-a0f0-591ebe1e88da",
+            "submission_name": "jane submission",
+            "summary": "janes clever submission",
+            "submission": "https://docs.djangoproject.com/"
+        }
+    }
+]

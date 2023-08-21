@@ -1,0 +1,47 @@
+[
+    {
+        "model": "accounts.account",
+        "pk": "626d2192-045d-499b-a4e7-f1b56f5cf085",
+        "fields": {
+            "password": "pbkdf2_sha256$600000$p635ZkNXnSh17wuppOEhwF$BP87NQXSn7yxQs0xGEq80KomLJa2ssD4yIamULEpdpc=",
+            "last_login": "2023-08-21T01:34:01.012Z",
+            "first_name": "admin",
+            "last_name": "account",
+            "email": "admin@admin.com",
+            "role": "ORGANISER",
+            "signup_date": "2023-08-21T01:32:57.258Z",
+            "is_active": true,
+            "is_admin": true
+        }
+    },
+    {
+        "model": "accounts.account",
+        "pk": "932d138f-584d-41d9-a0f0-591ebe1e88da",
+        "fields": {
+            "password": "pbkdf2_sha256$600000$TEu0PVOezfsxRC5huWHsV3$/g4JzOg8KpWDTIdBV1xpHMD33Si6/Rp+WIXpw8xLGBc=",
+            "last_login": null,
+            "first_name": "Jane",
+            "last_name": "Doe",
+            "email": "janedoe@live.com",
+            "role": "PARTICIPANT",
+            "signup_date": "2023-08-21T01:35:11.516Z",
+            "is_active": true,
+            "is_admin": false
+        }
+    },
+    {
+        "model": "accounts.account",
+        "pk": "c46bb3bf-caf2-4ad8-aea0-c041d66c792e",
+        "fields": {
+            "password": "pbkdf2_sha256$600000$MloT0gpnDeJDisZzxGYDED$1x7BkVsWUQTxs595SK6irE7UGeG9rFgWvWw8C4rgZdk=",
+            "last_login": null,
+            "first_name": "John",
+            "last_name": "Doe",
+            "email": "johndoe@live.com",
+            "role": "PARTICIPANT",
+            "signup_date": "2023-08-21T01:35:01.459Z",
+            "is_active": true,
+            "is_admin": false
+        }
+    }
+]
