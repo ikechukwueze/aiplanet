@@ -138,7 +138,8 @@ class ApiTests(APITestCase):
         
         view = SubmitHackathonSolution()
         view.setup(request)
-        serializer_used = view.get_serializer_class(self.new_hackathon.id)
+        view.hackathon_id = self.new_hackathon.id
+        serializer_used = view.get_serializer_class()
 
         self.assertEqual(serializer_used, expected_serializer)
         file.close()
@@ -212,29 +213,3 @@ class ApiTests(APITestCase):
         response = self.jane_client.get(reverse("enrolled-hackathons"))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(len(response.data), janes_hackathons.count())
-
-
-
-
-
-# class CreateHackathonTest(APITestCase):
-#     def setUp(self):
-#         self.client = APIClient()
-#         self.user = User.objects.create_user(username='testuser', password='testpassword')
-#         self.token = self.user.auth_token.key
-#         self.client.credentials(HTTP_AUTHORIZATION='Token ' + self.token)
-
-#     def test_create_hackathon(self):
-#         url = '/path/to/create-hackathon/'  # Replace with your actual URL
-
-#         data = {
-#             # Fill in the data for your Hackathon
-#         }
-
-#         response = self.client.post(url, data, format='json')
-
-#         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
-#         self.assertEqual(Hackathon.objects.count(), 1)
-#         self.assertEqual(Hackathon.objects.get().organiser, self.user)
-
-#     # Add more test cases as needed

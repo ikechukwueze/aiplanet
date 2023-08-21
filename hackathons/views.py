@@ -169,15 +169,16 @@ class RetrieveParticipantSubmissionForHackathon(RetrieveAPIView):
 class SubmitHackathonSolution(CreateAPIView):
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated, IsHackathonParticipant]
+    hackathon_id = None
 
-    def get_serializer_class(self, hackathon_id):
+    def get_serializer_class(self):
         serializers = {
             Hackathon.SubmissionType.LINK: LinkSubmissionSerializer,
             Hackathon.SubmissionType.IMAGE: ImageSubmissionSerializer,
             Hackathon.SubmissionType.FILE: FileSubmissionSerializer,
         }
         try:
-            hackathon = Hackathon.objects.get(id=hackathon_id)
+            hackathon = Hackathon.objects.get(id=self.hackathon_id)
         except Hackathon.DoesNotExist:
             return None
         else:
@@ -185,15 +186,15 @@ class SubmitHackathonSolution(CreateAPIView):
 
     @transaction.atomic
     def post(self, request, **kwargs):
-        hackathon_id = kwargs["hackathon_id"]
-        serializer_class = self.get_serializer_class(hackathon_id)
+        self.hackathon_id = kwargs["hackathon_id"]
+        serializer_class = self.get_serializer_class()
 
         if serializer_class is None:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
         context = {
             "participant_id": request.user.id,
-            "hackathon_id": hackathon_id,
+            "hackathon_id": self.hackathon_id,
         }
         serializer = serializer_class(data=request.data, context=context)
         serializer.is_valid(raise_exception=True)
