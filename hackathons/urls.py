@@ -9,7 +9,6 @@ urlpatterns = [
     path("<int:pk>/", views.RetrieveUpdateDeleteHackathon.as_view(), name="retrieve-update-delete-hackathon"),
     path("<int:hackathon_id>/enrol/", views.HackathonEnrollment.as_view(), name="enrol-for-hackathon"),
     path("enrolled-hackathons/", views.ListEnrolledHackathons.as_view(), name="enrolled-hackathons"),
-    #path("submissions/", views.ListHackathonSubmissions.as_view(), name="all-hackathon-submissions"),
     path("<int:hackathon_id>/submit/", views.SubmitHackathonSolution.as_view(), name="submit-hackathon-solution"),
 
     path("organiser/hackathon-submissions/", views.ListSubmissionsForAllHackathons.as_view(), name="all-hackathon-submissions"),
